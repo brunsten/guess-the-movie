@@ -1,0 +1,98 @@
+{
+  "name": "hang-ular-man",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/hang-ular-man/src",
+  "prefix": "hang-ular-man",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/hang-ular-man",
+        "index": "apps/hang-ular-man/src/index.html",
+        "main": "apps/hang-ular-man/src/main.ts",
+        "polyfills": "apps/hang-ular-man/src/polyfills.ts",
+        "tsConfig": "apps/hang-ular-man/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/hang-ular-man/src/favicon.ico",
+          "apps/hang-ular-man/src/assets"
+        ],
+        "styles": ["apps/hang-ular-man/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/hang-ular-man/src/environments/environment.ts",
+              "with": "apps/hang-ular-man/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "hang-ular-man:build:production"
+        },
+        "development": {
+          "browserTarget": "hang-ular-man:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/hang-ular-man/proxy.conf.json"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "hang-ular-man:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/hang-ular-man/**/*.ts",
+          "apps/hang-ular-man/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/hang-ular-man"],
+      "options": {
+        "jestConfig": "apps/hang-ular-man/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
