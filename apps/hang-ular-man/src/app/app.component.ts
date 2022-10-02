@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Message } from '@hang-ular-man/api-interfaces';
+import { WebsocketService } from './services/websocket.service';
 
 @Component({
   selector: 'hang-ular-man-root',
@@ -9,5 +10,12 @@ import { Message } from '@hang-ular-man/api-interfaces';
 })
 export class AppComponent {
   hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private websocketService: WebsocketService
+  ) {
+    this.websocketService.messages.subscribe((message) => {
+      console.log(message);
+    });
+  }
 }
