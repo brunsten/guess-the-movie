@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Message } from '@hang-ular-man/api-interfaces';
-import { WebsocketService } from './services/websocket.service';
+import { Component } from '@angular/core';
+import { GameService } from './services/game.service';
 
 @Component({
   selector: 'hang-ular-man-root',
@@ -9,13 +8,9 @@ import { WebsocketService } from './services/websocket.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(
-    private http: HttpClient,
-    private websocketService: WebsocketService
-  ) {
-    this.websocketService.messages.subscribe((message) => {
-      console.log(message);
-    });
+  constructor(private http: HttpClient, private gameService: GameService) {}
+
+  startGame() {
+    this.gameService.sendStartGame();
   }
 }
