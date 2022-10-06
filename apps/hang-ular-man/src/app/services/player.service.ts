@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Player } from '@hang-ular-man/api-interfaces';
+import { Player } from '@gtm/api-interfaces';
 import { ReplaySubject } from 'rxjs';
 import uuid4 from 'uuid4';
 @Injectable({

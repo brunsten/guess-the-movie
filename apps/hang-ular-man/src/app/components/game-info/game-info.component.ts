@@ -3,7 +3,7 @@ import { GameService } from '../../services/game.service';
 import { PlayerService } from '../../services/player.service';
 
 @Component({
-  selector: 'hang-ular-man-game-info',
+  selector: 'gtm-game-info',
   templateUrl: './game-info.component.html',
   styleUrls: ['./game-info.component.scss'],
 })

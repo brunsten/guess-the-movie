@@ -1,4 +1,4 @@
-import { ApiPlayer } from '@hang-ular-man/api-interfaces';
+import { ApiPlayer } from '@gtm/api-interfaces';
 import { Injectable } from '@nestjs/common';
 import axios from 'axios';
 import { from, Observable, of, switchMap, throwError } from 'rxjs';

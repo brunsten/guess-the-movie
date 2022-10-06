@@ -1,25 +1,25 @@
 {
-  "name": "hang-ular-man",
+  "name": "gtm",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/hang-ular-man/src",
-  "prefix": "hang-ular-man",
+  "sourceRoot": "apps/gtm/src",
+  "prefix": "gtm",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/hang-ular-man",
-        "index": "apps/hang-ular-man/src/index.html",
-        "main": "apps/hang-ular-man/src/main.ts",
-        "polyfills": "apps/hang-ular-man/src/polyfills.ts",
-        "tsConfig": "apps/hang-ular-man/tsconfig.app.json",
+        "outputPath": "dist/apps/gtm",
+        "index": "apps/gtm/src/index.html",
+        "main": "apps/gtm/src/main.ts",
+        "polyfills": "apps/gtm/src/polyfills.ts",
+        "tsConfig": "apps/gtm/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/hang-ular-man/src/favicon.ico",
-          "apps/hang-ular-man/src/assets"
+          "apps/gtm/src/favicon.ico",
+          "apps/gtm/src/assets"
         ],
-        "styles": ["apps/hang-ular-man/src/styles.scss"],
+        "styles": ["apps/gtm/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -38,8 +38,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/hang-ular-man/src/environments/environment.ts",
-              "with": "apps/hang-ular-man/src/environments/environment.prod.ts"
+              "replace": "apps/gtm/src/environments/environment.ts",
+              "with": "apps/gtm/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -59,37 +59,37 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "hang-ular-man:build:production"
+          "browserTarget": "gtm:build:production"
         },
         "development": {
-          "browserTarget": "hang-ular-man:build:development"
+          "browserTarget": "gtm:build:development"
         }
       },
       "defaultConfiguration": "development",
       "options": {
-        "proxyConfig": "apps/hang-ular-man/proxy.conf.json"
+        "proxyConfig": "apps/gtm/proxy.conf.json"
       }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "hang-ular-man:build"
+        "browserTarget": "gtm:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "apps/hang-ular-man/**/*.ts",
-          "apps/hang-ular-man/**/*.html"
+          "apps/gtm/**/*.ts",
+          "apps/gtm/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/hang-ular-man"],
+      "outputs": ["coverage/apps/gtm"],
       "options": {
-        "jestConfig": "apps/hang-ular-man/jest.config.ts",
+        "jestConfig": "apps/gtm/jest.config.ts",
         "passWithNoTests": true
       }
     }

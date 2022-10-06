@@ -1,4 +1,4 @@
-import { GameData, GameState } from '@hang-ular-man/api-interfaces';
+import { GameData, GameState } from '@gtm/api-interfaces';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()

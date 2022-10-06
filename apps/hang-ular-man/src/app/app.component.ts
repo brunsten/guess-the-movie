@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { GameService } from './services/game.service';
 
 @Component({
-  selector: 'hang-ular-man-root',
+  selector: 'gtm-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

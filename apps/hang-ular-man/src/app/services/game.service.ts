@@ -7,7 +7,7 @@ import {
   Player,
   SocketEvent,
   SocketMessage,
-} from '@hang-ular-man/api-interfaces';
+} from '@gtm/api-interfaces';
 import { ReplaySubject, Subject } from 'rxjs';
 import { io, Socket } from 'socket.io-client';
 import { PlayerService } from './player.service';

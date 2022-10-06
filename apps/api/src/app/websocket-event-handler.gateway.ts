@@ -9,7 +9,7 @@ import {
   PlayersUpdateMessage,
   SocketEvent,
   SocketMessage,
-} from '@hang-ular-man/api-interfaces';
+} from '@gtm/api-interfaces';
 import {
   ConnectedSocket,
   MessageBody,

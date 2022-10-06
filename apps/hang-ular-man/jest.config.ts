@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'hang-ular-man',
+  displayName: 'gtm',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -9,7 +9,7 @@ export default {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/apps/hang-ular-man',
+  coverageDirectory: '../../coverage/apps/gtm',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

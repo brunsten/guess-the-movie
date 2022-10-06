@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "hang-ular-man",
+  "npmScope": "gtm",
   "affected": {
     "defaultBase": "main"
   },
@@ -91,5 +91,5 @@
       "style": "scss"
     }
   },
-  "defaultProject": "hang-ular-man"
+  "defaultProject": "gtm"
 }
